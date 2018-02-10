@@ -1,7 +1,7 @@
 Python+MySqldb+Pandas+Smtplib发送邮件
 ====================================
 
-今天看到又耳笔记这篇[**导出mysql数据，利用pandas生成excel文档，并发送邮件**](http://blog.51cto.com/youerning/1708941)文章时，我决定把它实现出来。
+今天看到又耳笔记这篇[**导出mysql数据，利用pandas生成excel文档，并发送邮件**](http://blog.51cto.com/youerning/1708941)"Pandas获取数据，smtplib发送邮件"文章时，我决定把它实现出来。
 
 查资料、编码、测试、优化、写注释......花了3个多小时将全部工作完成。本文贴出的就是全部代码，只要安装了对应的包，在Python 2.7环境下可以直接拿过去跑，本机测试邮件能够发送成功。没有Mysql和Pandas也不要紧，跳过fetch_db和gen_xls函数，直接执行sendmsg就行。
 
@@ -43,12 +43,4 @@ https://github.com/benbendemo/learning-python/blob/master/python-smtplib/python_
 - [如何验证 Email 地址：SMTP 协议入门教程](http://www.ruanyifeng.com/blog/2017/06/smtp-protocol.html)
 - [Base64笔记](http://www.ruanyifeng.com/blog/2008/06/base64.html)
 
-    原文
-链接链接
-链接
-
-    这里
-链接是
-链接测试
-链接Tabe
-链
+**原文链接: **
