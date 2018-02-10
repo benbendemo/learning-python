@@ -1,9 +1,4 @@
----
-title: Python+MySqldb+Pandas+Smtplib发送邮件
-date: 2018-02-10 16:23:35
-categories: 编程
-tags: [Python,Pandas,Smtplib]
----
+###Python+MySqldb+Pandas+Smtplib发送邮件
 
 今天看到又耳笔记这篇[**导出mysql数据，利用pandas生成excel文档，并发送邮件**](http://blog.51cto.com/youerning/1708941)文章时，我决定把它实现出来。
 
