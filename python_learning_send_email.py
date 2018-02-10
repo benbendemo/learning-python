@@ -24,9 +24,9 @@ def fetch_db(sql):
     """
     fetch_db,创建数据库连接,执行sql语句查询结果
     """
-    
+    # user,passwd,db参数需要自行配置
     db_user = MySQLdb.connect(host='localhost',port=3306,charset='utf8',
-                              user='jackson',passwd='123456',db='webpy') 
+                              user='xxxxxx',passwd='xxxxxx',db='xxxxxx') 
     cursor = db_user.cursor()
     cursor.execute("SET NAMES utf8;")
     cursor.execute(sql)
@@ -111,19 +111,19 @@ def sendmsg(f_email,f_pwd,to_list,smtp_server,sendfile):
         server.login(f_email,f_pwd)
         server.sendmail(f_email,to_list,msg.as_string())
         server.quit()
-        print PGMname + ":" + "sendmsg_new" + ":" + "Send Email OK!"
+        print PGMname + ":" + "sendmsg" + ":" + "Send Email OK!"
     except Exception as e:
-        print PGMname + ":" + "sendmsg_new" + ":" + "Exception!",e
+        print PGMname + ":" + "sendmsg" + ":" + "Exception!",e
         
 # 要查询的sql语句
 sql = "SELECT * FROM allAstockinfo limit 50"
 
-# 待查询库表的列名
+# 待查询库表的列名,匹配allAstockinfo库表的列名
 col = ['code','name','outstanding','totals','totalAssets','esp','bvps','pb','pe',
 'reservedPerShare','rev','profit','gpr','npr','holders','industry','area','timeToMarket']
 
 # 接收邮件用户列表
-to_email = ['XXXXXXXX@qq.com','XXXXXXXX@hotmail.com','XXXXXXXX@126.com']
+to_email = ['XXXXXXXX@qq.com','XXXXXXXX@hotmail.com','XXXXXXXX@sohu.com']
 
 # 查询数据库
 res = fetch_db(sql)
