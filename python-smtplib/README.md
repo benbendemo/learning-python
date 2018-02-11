@@ -22,6 +22,10 @@ Mac os 10.11.6 + Anaconda Navigator 1.2.1+ Python 2.7.12 + Sublime 3.0
 -------
 https://github.com/benbendemo/learning-python/blob/master/python-smtplib/python_learning_send_email.py
 
+原文链接:
+-------
+http://bigbigben.com/2018/02/10/python-smtplib/
+
 执行结果：
 -------
 * 生成的excel文件如下图所示，表中数据使用tushare获取。
@@ -42,5 +46,3 @@ https://github.com/benbendemo/learning-python/blob/master/python-smtplib/python_
 - [MIME笔记](http://www.ruanyifeng.com/blog/2008/06/mime.html)
 - [如何验证 Email 地址：SMTP 协议入门教程](http://www.ruanyifeng.com/blog/2017/06/smtp-protocol.html)
 - [Base64笔记](http://www.ruanyifeng.com/blog/2008/06/base64.html)
-
-**原文链接: **
