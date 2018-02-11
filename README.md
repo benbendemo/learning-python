@@ -5,11 +5,8 @@
 
 ### 联系方式
 作者:肖畅  
-
 邮箱:xc0910@hotmail.com  
-
 公众号:dxy-nuanliu  
-
 博客:http://bigbigben.com  
 
 [![Github Releases](https://img.shields.io/github/downloads/atom/atom/latest/total.svg)]() 
