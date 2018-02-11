@@ -4,9 +4,12 @@
 + [Python+MySqldb+Pandas+Smtplib发送邮件](https://github.com/benbendemo/learning-python/blob/master/python-smtplib/README.md)
 
 ### 联系方式
-作者:肖畅 
-邮箱:xc0910@hotmail.com 
-公众号:dxy-nuanliu 
-博客:http://bigbigben.com 
+作者:肖畅  
+
+邮箱:xc0910@hotmail.com  
+
+公众号:dxy-nuanliu  
+
+博客:http://bigbigben.com  
 
 [![Github Releases](https://img.shields.io/github/downloads/atom/atom/latest/total.svg)]() 
