@@ -1,4 +1,4 @@
-这个Repository包含我学习和写过的Python代码，欢迎查阅。
+这个Repository包含我学习和写过的Python代码，希望对你能起到一些帮助，如发现哪里有失误，欢迎指正。
 
 ### 目录
 + [Python+MySqldb+Pandas+Smtplib发送邮件](https://github.com/benbendemo/learning-python/blob/master/python-smtplib)
