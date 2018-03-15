@@ -13,11 +13,11 @@ https://www.kaggle.com/c/titanic/data
 环境准备：
 -------
 Mac os 10.11.6 + Anaconda Navigator 1.2.1 + Python 2.7.12
-主要用到的是Python数据分析那一套包，只要安装Anaconda，那些包就自动全包括在内。其次是安装seaborn进行图形输出处理。
+主要用到的是Python数据分析那一套包，只要安装Anaconda，那些包就自动全部包括在内。其次是安装seaborn进行图形输出处理。
 
 原文链接:
 -------
-http://bigbigben.com/2018/02/10/python-smtplib/
+http://bigbigben.com/2018/03/15/kaggle-titanic/
 
 执行结果：
 -------
