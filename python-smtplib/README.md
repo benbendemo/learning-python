@@ -9,7 +9,7 @@ Python+MySqldb+Pandas+Smtplib发送邮件
 
 环境准备：
 -------
-Mac os 10.11.6 + Anaconda Navigator 1.2.1+ Python 2.7.12 + Sublime 3.0
+Mac os 10.11.6 + Anaconda Navigator 1.2.1 + Python 2.7.12 + Sublime 3.0
 
 技术要点：
 -------
