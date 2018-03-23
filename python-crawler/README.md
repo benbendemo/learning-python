@@ -259,14 +259,14 @@ if __name__ == '__main__':
 
 - 生成的HTML文件和最终PDF文件如下。
 
-  ![htmls and pdf](python-crawler/htmls_and_pdf.jpg)
+  ![htmls and pdf](https://github.com/benbendemo/learning-python/blob/master/python-crawler/htmls_and_pdf.jpg)
 
   ​
 
 
 - 生成PDF文件预览，注意红色方框第5章第4节"逆命题"出现错位，我检查过，不是网页解析的问题，是电子书HTML文件源码中"逆命题"那一节的文本标签被错误定义为"h1"，手工将文件改为"h2"，再生成PDF就能修复这个问题。
 
-  ![pdf snapchat](python-crawler/pdf_snapchat.jpg)
+  ![pdf snapchat](https://github.com/benbendemo/learning-python/blob/master/python-crawler/pdf_snapchat.jpg)
 
   ​
 
