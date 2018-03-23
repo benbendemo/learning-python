@@ -1,9 +1,13 @@
 使用Python爬虫下载电子书
 ======================
 
-这两天将半年前写的爬虫代码重构了一下，本来以为要不了多久，结果前前后后花了我将近4个小时的时间。无力吐槽！半年前的代码是一个面向过程的处理，几个函数顺序执行，最终慢悠悠地把PDF生成出来，功能都齐全，但是可读性和拓展性极差。现在全部改为面向对象处理，将requests.Session操作剥离出来作为Crawler类，将解析网页的操作剥离出来作为Parse类，结构清楚了很多，耦合度（较之前）大大降低，基本达到我的要求。
+这两天将半年前写的爬虫代码重构了一下，本来以为要不了多久，结果前前后后花了我将近4个小时的时间。
 
-整体功能实现后，我写了一个cache函数，将Session操作缓存起来方便后续调用，本地调试成功，但最终没有采用，因为我设想的是将Session常驻内存，每次执行前检查缓存中有没有，有的话就直接用，没有才新建。但我这个cache函数是程序执行完后缓存的内容直接被释放。这几天在学习redis，估计我想要的效果得用redis才能实现。
+无力吐槽！:sob:
+
+半年前的代码是一个面向过程的处理，几个函数顺序执行，最终慢悠悠地把PDF生成出来，功能都齐全，但是可读性和拓展性极差。现在全部改为面向对象处理，将requests.Session操作剥离出来作为Crawler类，将解析网页的操作剥离出来作为Parse类，结构清楚了很多，耦合度（较之前）大大降低，基本达到我的要求。
+
+整体功能实现后，我写了一个cache函数，将Session操作缓存起来方便后续复用，本地调试成功，但最终没有采用。我的设想是在一定期限内将Session操作常驻内存，每次执行前检查缓存中有没有，有的话就直接用，没有才新建。但我这个cache函数在程序执行完后，缓存的内容直接被释放，每次执行都需要新建Session连接。这几天在学习Redis，估计我想要的效果得用redis才能实现。
 
 在将网页生成HTML文件到本地后，使用pdfkit工具将HTML文件转换为PDF很耗费时间，这一点请大家注意。
 
@@ -14,7 +18,7 @@ Mac os 10.11.6 + Anaconda Navigator 1.7.0+ Python 2.7.12 + Sublime 3.0
 #### 技术要点
 
 - Requests会话处理
-- BeautifulSoup网页解析技巧
+- BeautifulSoup网页解析
 - pdfkit工具（注意，一定要先安装wkhtmltopdf这个工具包）
 - decorator装饰器
 
@@ -257,12 +261,11 @@ if __name__ == '__main__':
 
 #### 执行结果
 
-- 生成的HTML文件和最终PDF文件如下。
+- 生成的HTML文件和PDF文件如下。
 
   ![htmls and pdf](https://github.com/benbendemo/learning-python/blob/master/python-crawler/htmls_and_pdf.jpg)
 
   ​
-
 
 - 生成PDF文件预览，注意红色方框第5章第4节"逆命题"出现错位，我检查过，不是网页解析的问题，是电子书HTML文件源码中"逆命题"那一节的文本标签被错误定义为"h1"，手工将文件改为"h2"，再生成PDF就能修复这个问题。
 
@@ -365,14 +368,13 @@ if __name__ == '__main__':
   *** Function Takes:*** 0:01:16.134701 Time
   ```
 
-
 #### 总结
 
 1. 使用pdfkit生成PDF文件，必须要先安装[wkhtmltopdf](https://wkhtmltopdf.org/downloads.html)这个工具。pdfkit只是一个入口程序，真正生成PDF这些脏活累活，都是wkhtmltopdf完成的。安装wkhtmltopdf成功后，在transfer_html_2_pdf函数中一定要指定正确的调用路径。
 
-2. 目前还没有设置缓存机制，这两天在看Redis，打算后续会加一个缓存处理。
+2. 目前还没有设置缓存机制，这两天在看Redis，打算后面加一个缓存处理。
 
-3. Crawler类里面使用的@classmethod装饰器，其实完全可以拿掉不要，我测试过，不用@classmtehod也没问题。
+3. Crawler类里面使用的@classmethod装饰器，其实完全可以拿掉不要，我测试过，不用@classmtehod也没问题。用这个显得高大上，装逼效果更好。:smile:
 
 4. Parse类里面用到的decorator装饰器，其实可以剥离出来成为一个单独的类，进一步降低耦合度。
 
