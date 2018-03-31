@@ -6,9 +6,10 @@
 + [使用Python爬虫下载电子书](https://github.com/benbendemo/learning-python/tree/master/python-crawler)
 
 ### 联系方式
-作者:肖畅
+作者:肖畅  
 邮箱:xc0910@hotmail.com  
 公众号:dxy-nuanliu  
 博客:http://bigbigben.com  
 
-[![Github Releases](https://img.shields.io/github/downloads/atom/atom/latest/total.svg)]() 
+[![Github Stars](https://img.shields.io/github/stars/benbendemo/learning-python.svg)]()   
+[![Github License](https://img.shields.io/github/license/benbendemo/learning-python.svg)]()  
