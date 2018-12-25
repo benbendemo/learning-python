@@ -44,7 +44,7 @@ APR=0.00394060*12=0.04728721
 
 代码实现：
 -------
-https://github.com/benbendemo/learning-python/blob/master/python-apr/python-flatrate-2-apr.py
+https://github.com/benbendemo/learning-python/blob/master/python-apr/python_learning_calc_flat_2_apr.py
 
 
 计算结果：
