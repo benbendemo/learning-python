@@ -4,12 +4,12 @@
 + [Python+MySqldb+Pandas+Smtplib发送邮件](https://github.com/benbendemo/learning-python/blob/master/python-smtplib)
 + [Python数据分析之泰坦尼克沉船统计](https://github.com/benbendemo/learning-python/tree/master/titanic)
 + [使用Python爬虫下载电子书](https://github.com/benbendemo/learning-python/tree/master/python-crawler)
++ [通过月平息计算实际年利率](https://github.com/benbendemo/learning-python/tree/master/python-apr)
 
 ### 联系方式
-作者:肖畅  
-邮箱:xc0910@hotmail.com  
+作者:肖畅   
 公众号:dxy-nuanliu  
-博客:http://bigbigben.com  
+博客:https://bigbigben.com  
 
 [![Github Stars](https://img.shields.io/github/stars/benbendemo/learning-python.svg)]()   
 [![Github License](https://img.shields.io/github/license/benbendemo/learning-python.svg)]()  
