@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="//code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script crossorigin="anonymous" src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js" integrity="sha256-AdQN98MVZs44Eq2yTwtoKufhnU+uZ7v2kXnD5vqzZVo=" ></script>
+    <script>
+        moment.locale("en");
+        function flask_moment_render(elem) {
+            $(elem).text(eval('moment("' + $(elem).data('timestamp') + '").' + $(elem).data('format') + ';'));
+            $(elem).removeClass('flask-moment').show();
+        }
+        function flask_moment_render_all() {
+            $('.flask-moment').each(function() {
+                flask_moment_render(this);
+                if ($(this).data('refresh')) {
+                    (function(elem, interval) {
+                        setInterval(function() {
+                            flask_moment_render(elem) }, interval); })(this, $(this).data('refresh'));
+                }
+            })
+        }
+        $(document).ready(function() {
+            flask_moment_render_all();
+        });
+    </script>
+    <title>测试Moment.js</title>
+</head>
+<body>
+    <h2>测试Moment.js是否能被加载成功</h2>
+    <p>Moment.js预期在Chrome浏览器能够加载成功；在Safari浏览器会遇到CORS报错</p>
+
+    <p> Orignal time is 2020-04-21 08:39:41.238502 </p>
+    <p> The local date and time is: <span class="flask-moment" data-timestamp="2020-04-21T08:39:41Z" data-format="format('LLL')" data-refresh="0" style="display: none">2020-04-21T08:39:41Z</span> </p>
+</body>
+</html>
